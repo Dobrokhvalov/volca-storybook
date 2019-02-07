@@ -5,6 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import Header from '../components/common/Header';
+
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -17,3 +19,24 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+// Pages
+storiesOf('Pages', module)
+    .add('Claim Page', () => <Button onClick={action('clicked')}>Hello Button</Button>)
+    .add('Pending Page', () => <Button onClick={action('clicked')}>Hello Button</Button>);
+
+
+// Common Components
+storiesOf('Common Components', module)
+  .add('Header', () => <Header/>)
+  .add('with some emoji', () => (
+    <Button onClick={action('clicked')}>
+      <span role="img" aria-label="so cool">
+        😀 😎 👍 💯
+      </span>
+    </Button>
+));
+
+
+
+
