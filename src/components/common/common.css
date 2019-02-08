@@ -4,3 +4,30 @@
 	font-size: 30px;
 	text-align: center;
     }
+
+/* Footer */
+.footer1  { 
+            display: block;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 100%;
+        }
+.footer2 { 
+            width: 100%;
+            text-align: center;
+        } 
+.noHover { 
+            text-decoration: none;
+        }
+.poweredBy { 
+            display: inline;
+            font-size: 18px;
+            font-family: Inter UI Medium;
+            color: #979797;
+        } 
+.volca { 
+            display: inline;
+            font-size: 18px;
+            font-family: Inter UI Bold;
+            color: black;
+        }

@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 import '../../public/css/Inter UI fonts/interui-fonts.css'
 
 /*
@@ -32,14 +33,9 @@ storiesOf('Pages', module)
 // Common Components
 storiesOf('Common Components', module)
   .add('Header', () => <Header/>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-));
+  .add('Footer', () => <Footer/>)
 
+// Footer
 
 
 
