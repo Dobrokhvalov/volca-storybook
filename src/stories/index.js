@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import { Button, Welcome } from '@storybook/react/demo';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import '../../public/css/Inter UI fonts/interui-fonts.css'
