@@ -6,33 +6,20 @@ import { linkTo } from '@storybook/addon-links';
 
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
-import '../../public/css/Inter UI fonts/interui-fonts.css'
 
-/*
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
-
-
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
-*/
+import ClaimPage from '../components/pages/ClaimPage';
+import '../../public/css/Inter UI fonts/interui-fonts.css';
 
 // Pages
 storiesOf('Pages', module)
-    .add('Claim Page', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-    .add('Pending Page', () => <Button onClick={action('clicked')}>Hello Button</Button>);
+    .add('Claim Page', () => <ClaimPage/>);
+    //.add('Pending Page', () => <Button onClick={action('clicked')}>Hello Button</Button>);
 
 
 // Common Components
 storiesOf('Common Components', module)
   .add('Header', () => <Header/>)
-  .add('Footer', () => <Footer/>)
+    .add('Footer', () => <Footer/>);
 
 // Footer
 
