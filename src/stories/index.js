@@ -6,9 +6,11 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import Header from '../components/common/Header';
+import '../../public/css/Inter UI fonts/interui-fonts.css'
 
-
+/*
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+
 
 storiesOf('Button', module)
   .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
@@ -19,6 +21,7 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+*/
 
 // Pages
 storiesOf('Pages', module)

@@ -2,7 +2,7 @@ import React from "react";
 //import { Row, Col, Grid } from 'react-bootstrap';
 import './common.css';
 
-
+/*
 const styles = {
     header: { 
 	paddingTop: 32,
@@ -11,13 +11,13 @@ const styles = {
 	textAlign: 'center'
     }
 }
-
+*/
 
 class Header extends React.Component {
     render() {
         return (
-	    <div style={styles.header} className="header">
-              Get tokens
+	    <div className="header">
+              Get tokens right now
 	    </div>	    
         );
     }
