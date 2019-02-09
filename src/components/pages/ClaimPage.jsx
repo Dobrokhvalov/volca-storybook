@@ -1,15 +1,14 @@
 import React from "react";
 import Header from '../common/Header';
 import Footer from '../common/Footer';
+import Button from '../common/Button';
 import PageContainer from '../common/PageContainer';
 import './pages.css';
 
 
-const Content = () => {
+const PageContent = () => {
     return (
-	<div style={{textAlign: 'center'}}>
-	  Claim here
-	</div>
+	<Button label="Claim"/>	
     );
 }
 
@@ -20,7 +19,7 @@ class ClaimPage extends React.Component {
         return (
 	    <PageContainer>
 	      <Header/>
-	      <Content/>
+	      <PageContent/>
 	      <Footer/>
 	    </PageContainer>	    
         );
