@@ -1,33 +1,174 @@
 .header { 
-	padding-top: 32px;
-	font-family: Inter UI Black;
-	font-size: 30px;
-	text-align: center;
-    }
+    padding-top: 32px;
+    font-family: Inter UI Bold;
+    font-size: 30px;
+    text-align: center;
+}
 
 /* Footer */
-.footer1  { 
-            display: block;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            width: 100%;
-        }
-.footer2 { 
-            width: 100%;
-            text-align: center;
-        } 
-.noHover { 
-            text-decoration: none;
-        }
-.poweredBy { 
-            display: inline;
-            font-size: 18px;
-            font-family: Inter UI Medium;
-            color: #979797;
-        } 
+.footer  { 
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+.footer-align { 
+    width: 100%;
+    text-align: center;
+} 
+.no-hover { 
+    text-decoration: none;
+}
+.powered-by { 
+    display: inline;
+    font-size: 18px;
+    font-family: Inter UI Regular;
+    color: #979797;
+} 
 .volca { 
-            display: inline;
-            font-size: 18px;
-            font-family: Inter UI Bold;
-            color: black;
-        }
+    display: inline;
+    font-size: 18px;
+    font-family: Inter UI Medium;
+    color: black;
+}
+
+/* Button */
+.button {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #0078FF;
+    opacity: 1;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Inter UI Medium";
+    cursor: pointer;
+}
+
+
+.button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Spinner */
+.lds-button-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11px;
+    margin-right: 11px;
+}
+.lds-button-spinner div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    margin: 6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: lds-button-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-button-spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-button-spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-button-spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-button-spinner {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+
+/* Page Container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
+/* Token Icon */
+.token-icon { 
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+
+/* Common */
+.bold {
+    font-weight: bold;
+}
+
+
+/* Pending Icon */
+.dot-pulse-inner {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0099ff;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 153, 255, 0.5);
+    animation: pulse 2s infinite;
+    margin: 10px;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+	opacity: 0.5;
+    }
+    100% {
+	opacity: 1;
+    }
+}
+@keyframes pulse {
+    0% {
+	opacity: 0.5;
+    }
+    100% {
+	opacity: 1;
+    }    
+}
+
+
+.dot-pulse-middle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:  rgba(0, 153, 255, 0.5);
+    cursor: pointer;
+    box-shadow:  rgba(0, 153, 255, 0.5);
+    animation: pulse 2s infinite;
+    margin: 10px;    
+}
+
+.dot-pulse-outer {
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background:  rgba(0, 153, 255, 0.25);
+    cursor: pointer;
+    box-shadow:  rgba(0, 153, 255, 0.25);
+    animation: pulse 2s infinite;
+}

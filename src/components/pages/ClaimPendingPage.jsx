@@ -3,26 +3,21 @@ import Header from '../common/Header';
 import Footer from '../common/Footer';
 import Button from '../common/Button';
 import PageContainer from '../common/PageContainer';
-import TokenIcon from '../common/TokenIcon';
+import PendingIcon from '../common/PendingIcon';
 import './pages.css';
 
 
 const PageContent = () => {
     return (
-	<div className="claim-page">
-	  <TokenIcon/>
-	  <div className="claim-title">10 DGT</div>
-	  <Button label="Claim"/>
-	  <div className="button-subtitle">Claiming to: 
-	    <span className="highlight"> 0x000...000</span>
-	  </div>
+	<div className="claim-pending-page">
+	  <PendingIcon/>
 	</div>
     );
 }
 
 
 
-class ClaimPage extends React.Component {
+class ClaimPendingPage extends React.Component {
     render() {
         return (
 	    <PageContainer>
@@ -34,4 +29,4 @@ class ClaimPage extends React.Component {
     }
 }
 
-export default ClaimPage;
+export default ClaimPendingPage;
