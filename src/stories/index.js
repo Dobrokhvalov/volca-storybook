@@ -2,20 +2,26 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
+// common components
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Button from "../components/common/Button";
 import TokenIcon from "../components/common/TokenIcon";
 import PageContainer from "../components/common/PageContainer";
+import PendingIcon from "../components/common/PendingIcon";
 
+// pages
 import ClaimPage from "../components/pages/ClaimPage";
+import ClaimPendingPage from "../components/pages/ClaimPendingPage";
 
 // css imports for storybook
 import "../../public/css/Inter UI fonts/interui-fonts.css";
 import "../components/common/common.css";
 
 // Pages
-storiesOf("Pages", module).add("Claim Page", () => <ClaimPage />);
+storiesOf("Pages", module)
+    .add("Claim Page", () => <ClaimPage />)
+    .add("Claim Pending Page", () => <ClaimPendingPage />);
 
 // Common Components
 storiesOf("Common Components", module)
@@ -63,4 +69,6 @@ storiesOf("Common Components", module)
         <TokenIcon tokenAddress="0x000" />
       </div>
     </div>
-  ));
+  ))
+  .add("Pending Icon", () => <PendingIcon />);
+
