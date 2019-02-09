@@ -34,8 +34,7 @@
 
 /* Button */
 .button {
-    width: 100%;
-    max-width: 300px;
+    width: 280px;
     height: 50px;
     border-radius: 10px;
     border-color: white;
@@ -104,10 +103,16 @@
 }
 
 /* Token Icon */
-.tokenIcon { 
+.token-icon { 
     width: 100px;
     height: 100px;
+    display: block;
 }
 
 
 
+
+/* Common */
+.bold {
+    font-weight: bold;
+}

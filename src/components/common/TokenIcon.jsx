@@ -14,7 +14,8 @@ class TokenIcon extends React.Component {
 
 	return (
 	    <RetinaImage
-	       className="tokenIcon"
+	       className="token-icon"
+	       style={{...this.props.style}}
 	       src={this.state.imageExists ? tokenUrl : defaultTokenUrl}
 	       onError={(e) => { this.setState({ imageExists: false }); }} />
 	);

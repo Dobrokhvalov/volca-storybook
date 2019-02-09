@@ -1,0 +1,27 @@
+.claim-page *{
+    margin: auto;
+    text-align: center;
+}
+
+.claim-page .claim-title {
+    font-family: Inter UI Black;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 35px;
+    text-align: center;
+    color: #0078FF;
+    
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.claim-page .button-subtitle {    
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: "Inter UI Regular";
+}
+
+.claim-page .button-subtitle .bold{
+    font-family: "Inter UI Bold";
+}
