@@ -51,20 +51,16 @@ storiesOf("Common Components", module)
       <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
     </PageContainer>
   ))
-    .add("Token Icon", () => (
-	    <div>
-	      <div>
-                <h4> ZRX token: </h4>
-	         <TokenIcon tokenAddress="0xe41d2489571d322189246dafa5ebde1f4699f498"/>
-	       </div>
-	       <hr />
-	       <div>
-                 <h4> Unknown Token: </h4>
-  	         <TokenIcon tokenAddress="0x000"/>
-	       </div>
-          </div>
-    ));
-
-
-
-
+  .add("Token Icon", () => (
+    <div>
+      <div>
+        <h4> ZRX token: </h4>
+        <TokenIcon tokenAddress="0xe41d2489571d322189246dafa5ebde1f4699f498" />
+      </div>
+      <hr />
+      <div>
+        <h4> Unknown Token: </h4>
+        <TokenIcon tokenAddress="0x000" />
+      </div>
+    </div>
+  ));
