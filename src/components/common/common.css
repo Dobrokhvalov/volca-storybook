@@ -92,3 +92,12 @@
     transform: rotate(360deg);
     }
 }
+
+
+/* Page Container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;    
+}

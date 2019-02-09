@@ -5,6 +5,7 @@ import { storiesOf } from "@storybook/react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Button from "../components/common/Button";
+import PageContainer from "../components/common/PageContainer";
 
 import ClaimPage from "../components/pages/ClaimPage";
 
@@ -41,6 +42,13 @@ storiesOf("Common Components", module)
         <Button label="Claim" style={{ backgroundColor: "#aaa" }} />
       </div>
     </div>
+  ))
+  .add("Page Container", () => (
+    <PageContainer>
+      <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
+      <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
+      <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
+    </PageContainer>
   ));
 
 // Footer
