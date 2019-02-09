@@ -5,6 +5,7 @@ import { storiesOf } from "@storybook/react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Button from "../components/common/Button";
+import TokenIcon from "../components/common/TokenIcon";
 import PageContainer from "../components/common/PageContainer";
 
 import ClaimPage from "../components/pages/ClaimPage";
@@ -49,6 +50,21 @@ storiesOf("Common Components", module)
       <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
       <div style={{ backgroundColor: "#aaa", height: 50, width: 50 }} />
     </PageContainer>
-  ));
+  ))
+    .add("Token Icon", () => (
+	    <div>
+	      <div>
+                <h4> ZRX token: </h4>
+	         <TokenIcon tokenAddress="0xe41d2489571d322189246dafa5ebde1f4699f498"/>
+	       </div>
+	       <hr />
+	       <div>
+                 <h4> Unknown Token: </h4>
+  	         <TokenIcon tokenAddress="0x000"/>
+	       </div>
+          </div>
+    ));
 
-// Footer
+
+
+
