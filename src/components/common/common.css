@@ -186,3 +186,13 @@ a.link:hover {
     color: #007acc !important;
     text-decoration: none !important
 }
+
+
+/* Claim Completed */
+.claim-completed-icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+}
