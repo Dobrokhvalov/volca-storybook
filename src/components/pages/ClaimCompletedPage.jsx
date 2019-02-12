@@ -3,7 +3,7 @@ import Header from '../common/Header';
 import Footer from '../common/Footer';
 import Button from '../common/Button';
 import PageContainer from '../common/PageContainer';
-import PendingIcon from '../common/PendingIcon';
+import ClaimCompletedIcon from '../common/ClaimCompletedIcon';
 import './pages.css';
 
 
@@ -11,21 +11,14 @@ import './pages.css';
 const PageContent = () => {
     const etherscanLink = "#";
     return (
-	<div className="claim-pending-page">
-	  <PendingIcon/>
+	<div className="claim-completed-page">
+	  <ClaimCompletedIcon/>
           <div className="text-center">
             <div className="title">
-              Claiming...
-            </div>
-            <div className="subtitle">
-              Transaction is processing
-            </div>
-            <div className="text">
-              It may take a few minutes. You can<br />
-	      check status later in 'Wallet'.
+	      You claimed <span className="bold-blue">10 DGT</span>
             </div>
             <div>
-              <div className="text etherscan-details">
+              <div className="text">
                 Details on <a className="link" href={etherscanLink}>Etherscan</a>
               </div>
             </div>

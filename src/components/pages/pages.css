@@ -32,24 +32,19 @@
 .claim-pending-page .title {
     margin-top: 40px;
     margin-bottom: 30px;
-    text-align: center;
-    font-size: 24px;
-    font-family: Inter UI Black;
 }
 
 .claim-pending-page .subtitle {
-    text-align: center;
-    font-size: 18px;
     margin-bottom: 30px;
-    font-family: Inter UI Medium;
-    color: #979797;
 }
 
+.claim-pending-page .etherscan-details {
+    margin-top: 10px;
+}
 
-.claim-pending-page .text {
-    font-size: 14px;
-    font-family: Inter UI Regular;
-    text-align: center;
-    margin-bottom: 10px;
+/* Completed Claim Page */
+.claim-completed-page .title {
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
