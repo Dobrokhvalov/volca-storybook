@@ -173,3 +173,16 @@
     box-shadow:  rgba(0, 153, 255, 0.25);
     animation: pulse 2s infinite;
 }
+
+.text-center {
+    text-align: center;
+}
+
+a.link {
+    color: #0099ff;
+    text-decoration: none !important
+}
+a.link:hover {
+    color: #007acc !important;
+    text-decoration: none !important
+}
