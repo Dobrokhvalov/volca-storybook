@@ -4,4 +4,4 @@ import "../components/common/common.css";
 
 // stories
 import "./pages";
-import "./commonComponents";
+import "./common";
