@@ -1,5 +1,5 @@
 import React from 'react'
-import TokenIcon from '../../components/common/TokenIcon'
+import TokenIcon from '../../new-components/common/TokenIcon'
 
 const TokenIconStory = () => (
   <div>

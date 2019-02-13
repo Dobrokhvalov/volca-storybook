@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../../components/common/Button'
+import Button from '../../new-components/common/Button'
 
 const ButtonStory = () => (
   <div>

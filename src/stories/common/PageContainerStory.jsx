@@ -1,5 +1,5 @@
 import React from 'react'
-import PageContainer from '../../components/common/PageContainer'
+import PageContainer from '../../new-components/common/PageContainer'
 
 const PageContainerStory = () => (
   <PageContainer>

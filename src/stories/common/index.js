@@ -7,10 +7,10 @@ import PageContainerStory from './PageContainerStory.jsx'
 import TokenIconStory from './TokenIconStory.jsx'
 
 // common components
-import Header from '../../components/common/Header'
-import Footer from '../../components/common/Footer'
-import PendingIcon from '../../components/common/PendingIcon'
-import ClaimCompletedIcon from '../../components/common/ClaimCompletedIcon'
+import Header from '../../new-components/common/Header'
+import Footer from '../../new-components/common/Footer'
+import PendingIcon from '../../new-components/common/PendingIcon'
+import ClaimCompletedIcon from '../../new-components/common/ClaimCompletedIcon'
 
 // Common Components
 storiesOf('Common Components', module)
