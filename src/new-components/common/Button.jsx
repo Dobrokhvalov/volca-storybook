@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ButtonSpinner } from './Spinner'
 // import './common.css';
 
@@ -11,8 +11,7 @@ class Button extends React.Component {
         style={{ ...this.props.style }}
         onClick={this.props.onClick}
         refreshing={(this.props.refreshing || false).toString()}
-	       >
-
+      >
         {this.props.refreshing ? <ButtonSpinner /> : this.props.label }
       </button>
     )
