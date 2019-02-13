@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonSpinner } from './Spinner'
-// import './common.css';
+
 
 class Button extends React.Component {
   render () {

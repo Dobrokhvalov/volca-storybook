@@ -11,6 +11,7 @@ import Header from '../../components/dumb/common/Header'
 import Footer from '../../components/dumb/common/Footer'
 import PendingIcon from '../../components/dumb/common/PendingIcon'
 import ClaimCompletedIcon from '../../components/dumb/common/ClaimCompletedIcon'
+import Error from '../../components/dumb/common/Error'
 
 // Common Components
 storiesOf('Common Components', module)
@@ -21,3 +22,4 @@ storiesOf('Common Components', module)
   .add('Token Icon', TokenIconStory)
   .add('Pending Icon', () => <PendingIcon />)
   .add('Claim Completed Icon', () => <ClaimCompletedIcon />)
+  .add('Error', () => <Error text='This is an example of error-messgae' />)
