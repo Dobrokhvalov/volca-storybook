@@ -35,14 +35,13 @@ class NoWalletDesktop extends React.Component {
         <div>
           <div><img src={'https://raw.githubusercontent.com/Eth2io/eth2-assets/master/images/attention_icon.png'} style={styles.largeWalletIcon} /></div>
           <div style={{ ...styles.title }}>You need a wallet to<br />claim tokens </div>
-
           <div style={styles.buttonRow}>
             <Button
               label='Use Portis'
               style={{ backgroundColor: '#6CB3DB', borderColor: '#6CB3DB' }}
+              refreshing={this.state.fetchingPortis}
               onClick={this._openPortisModal.bind(this)} />
           </div>
-
           <div style={styles.buttonRow}>
             <a href='https://metamask.io/' style={{ ...styles.button, backgroundColor: '#f5a623', borderColor: '#f5a623' }} target='_blank'>Use Metamask</a>
           </div>
