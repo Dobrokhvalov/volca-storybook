@@ -141,7 +141,7 @@ class NoWalletPageMobile extends React.Component {
     this.setState({ fetchingPortis: true })
     setTimeout(async () => { // let UI update
       console.log('openning modal')
-      await this.props.setupPortisWeb3()
+      await this.props.showPortisModal()
       this.setState({ fetchingPortis: false })
     }, 0)
   }

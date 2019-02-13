@@ -38,15 +38,13 @@ class WalletSlider extends React.Component {
       const deviceOS = this.props.deviceOS
 
       return (
-        <div style={{ padding: 10, marginBottom: 20 }}>
+        <div style={{ padding: 10, marginBottom: 20, width: window.innerWidth }}>
           <div style={styles.chooseWallet}>Choose your wallet:</div>
           <Slider {...settings}
           >
             {Object.keys(wallets)
 		      .map(walletId => wallets[walletId])
-		      // .filter(wallet => wallet.id !== this.props.selectedWallet.id)
 		      .filter(wallet => {
-			  // console.log({wallet, deviceOS});
 			  return wallet.mobile[deviceOS] && wallet.mobile[deviceOS].support
 		      })
 		      .map(wallet => {

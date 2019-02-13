@@ -6,15 +6,15 @@ import NoWalletPageDesktop from './../dumb/pages/NoWalletPageDesktop'
 import NoWalletPageMobile from './../dumb/pages/NoWalletPageMobile'
 const qs = require('querystring')
 
-const NoWalletPage = ({ showPortisModal, location }) => {
+const NoWalletPage = ({ setupPortisWeb3, location }) => {
   if (window.innerWidth < 769) {
     // parse url params
     const queryParams = qs.parse(location.search.substring(1))
     const walletId = (queryParams.wallet || queryParams.w)
     const os = getDeviceOS()
-    return <NoWalletPageMobile os={os} walletId={walletId} showPortisModal={showPortisModal} />
+    return <NoWalletPageMobile deviceOS={os} walletId={walletId} showPortisModal={setupPortisWeb3} />
   }
-  return <NoWalletPageDesktop showPortisModal={showPortisModal} />
+  return <NoWalletPageDesktop showPortisModal={setupPortisWeb3} />
 }
 
 export default connect(null, { setupPortisWeb3 })(NoWalletPage)
