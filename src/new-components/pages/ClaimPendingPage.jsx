@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../common/Header'
 import Footer from '../common/Footer'
-import Button from '../common/Button'
 import PageContainer from '../common/PageContainer'
 import PendingIcon from '../common/PendingIcon'
 import './pages.css'
@@ -13,18 +12,18 @@ const PageContent = () => {
       <PendingIcon />
       <div className='text-center'>
         <div className='title'>
-              Claiming...
+          Claiming...
         </div>
         <div className='subtitle'>
-              Transaction is processing
+          Transaction is processing
         </div>
         <div className='text'>
-              It may take a few minutes. You can<br />
-	      check status later in 'Wallet'.
+          It may take a few minutes. You can<br />
+          check status later in 'Wallet'.
         </div>
         <div>
           <div className='text etherscan-details'>
-                Details on <a className='link' href={etherscanLink}>Etherscan</a>
+            Details on <a className='link' href={etherscanLink}>Etherscan</a>
           </div>
         </div>
       </div>
