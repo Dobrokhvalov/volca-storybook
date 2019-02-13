@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 // stories
 import './ClaimPageStory'
+import './NoWalletStory'
 
 // pages
 import ClaimPendingPage from '../../components/dumb/pages/ClaimPendingPage'
