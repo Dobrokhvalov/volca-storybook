@@ -19,19 +19,18 @@ export class TransferScreen extends Component {
 
     switch (transfer.status) {
       case 'receiving':
-      case 'received':
         return (
           <ClaimPendingPage
             networkId={transfer.networkId}
             txHash={transfer.txHash} />
         )
-        /* case 'received':
-         *   return (
-         *     <ClaimCompletedPage
-         *       networkId={transfer.networkId}
-         *       txHash={transfer.txHash}
-         *       isReceiver />
-        ) */
+      case 'received':
+        return (
+          <ClaimCompletedPage
+            networkId={transfer.networkId}
+            txHash={transfer.txHash}
+            isReceiver />
+        )
       default: {
         window.alert('Unknown status: ' + transfer.status)
       }

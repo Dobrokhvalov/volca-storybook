@@ -6,12 +6,15 @@ import PageContainer from '../common/PageContainer'
 import TokenIcon from '../common/TokenIcon'
 import './pages.css'
 
-const PageContent = () => {
+const PageContent = ({ onSubmit, refreshing }) => {
   return (
     <div className='claim-page'>
       <TokenIcon />
       <div className='claim-title'>10 DGT</div>
-      <Button label='Claim' />
+      <Button
+        label='Claim'
+        onClick={onSubmit}
+        refreshing={refreshing} />
       <div className='button-subtitle'>Claiming to:
         <span className='bold'> 0x000...000</span>
       </div>
@@ -24,7 +27,7 @@ class ClaimPage extends React.Component {
     return (
       <PageContainer>
         <Header />
-        <PageContent />
+        <PageContent {...this.props} />
         <Footer />
       </PageContainer>
     )
