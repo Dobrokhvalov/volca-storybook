@@ -68,3 +68,21 @@ export function getDeviceOS () {
 
   return 'other'
 }
+
+const getEtherscanSubdomain = (networkId) => {
+  let subdomain = ''
+  if (String(networkId) !== '1') {
+    subdomain = getNetworkNameById(String(networkId)).toLowerCase() + '.'
+  }
+  return subdomain
+}
+
+export const getEtherscanLinkTx = ({ txHash, networkId }) => {
+  const subdomain = getEtherscanSubdomain(networkId)
+  return `https://${subdomain}etherscan.io/tx/${txHash}`
+}
+
+export const getEtherscanLinkAddress = ({ networkId, address }) => {
+  const subdomain = getEtherscanSubdomain(networkId)
+  return `https://${subdomain}etherscan.io/address/${address}`
+}

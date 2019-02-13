@@ -3,5 +3,7 @@ export {
   detectNetwork,
   getQueryParams,
   getNetworkNameById,
-  getDeviceOS
+  getDeviceOS,
+  getEtherscanLinkTx,
+  getEtherscanLinkAddress
 } from './helpers'

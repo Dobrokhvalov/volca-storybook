@@ -3,10 +3,11 @@ import Header from '../common/Header'
 import Footer from '../common/Footer'
 import PageContainer from '../common/PageContainer'
 import ClaimCompletedIcon from '../common/ClaimCompletedIcon'
+import { getEtherscanLinkTx } from '../../utils'
 import './pages.css'
 
-const PageContent = () => {
-  const etherscanLink = '#'
+const PageContent = ({ txHash, networkId = '1', isReceiver = false }) => {
+  const etherscanLink = getEtherscanLinkTx({ txHash, networkId })
   return (
     <div className='claim-completed-page'>
       <ClaimCompletedIcon />
@@ -16,7 +17,7 @@ const PageContent = () => {
         </div>
         <div>
           <div className='text'>
-            Details on <a className='link' href={etherscanLink}>Etherscan</a>
+            Details on <a className='link' href={etherscanLink} target='_blank'>Etherscan</a>
           </div>
         </div>
       </div>
@@ -29,7 +30,7 @@ class ClaimPendingPage extends React.Component {
     return (
       <PageContainer>
         <Header />
-        <PageContent />
+        <PageContent {...this.props} />
         <Footer />
       </PageContainer>
     )
