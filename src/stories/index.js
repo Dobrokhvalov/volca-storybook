@@ -1,7 +1,7 @@
 // css imports for storybook
-import "../../public/css/Inter UI fonts/interui-fonts.css";
-import "../components/common/common.css";
+import '../../public/css/Inter UI fonts/interui-fonts.css'
+import '../components/common/common.css'
 
 // stories
-import "./pages";
-import "./common";
+import './pages'
+import './common'
