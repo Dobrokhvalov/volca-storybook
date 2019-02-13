@@ -1,14 +1,39 @@
 /* Claim Page */
 .claim-page .claim-title {
-    font-family: Inter UI Black;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 35px;
+    font-family: Inter UI Regular;
+    font-weight: 500;
+    line-height: 17px;
+    font-size: 24px;
     text-align: center;
-    color: #0078FF;    
-    margin-top: 30px;
+    letter-spacing: -1px;
+    color: #000000;
+    
+    margin-bottom: 30px;
+}
+
+.claim-page .claim-subtitle {
+    margin: auto;
+}
+.claim-page .claim-subtitle {
+    font-family: Inter UI Regular;    
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
     margin-bottom: 50px;
+}
+
+.claim-page .subtext {
+    font-family: Inter UI Regular;    
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #979797;    
+    margin-top: 20px;
 }
 
 .claim-page .token-icon {

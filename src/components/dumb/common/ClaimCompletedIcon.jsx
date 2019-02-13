@@ -7,7 +7,7 @@ class ClaimCompletedIcon extends React.Component {
     return (
       <RetinaImage
         className='claim-completed-icon'
-        src={`https://eth2.io/images/done.png`} />
+        src={`https://raw.githubusercontent.com/VolcaTech/eth2-assets/master/images/dada-done.png`} />
     )
   }
 }
