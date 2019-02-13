@@ -3,7 +3,6 @@ import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Slider from 'react-slick'
 import RetinaImage from 'react-retina-image'
 import wallets from './wallets'
-import { getDeviceOS } from './../../utils'
 import styles from './styles'
 
 class WalletSlider extends React.Component {
@@ -36,7 +35,7 @@ class WalletSlider extends React.Component {
         slidesToScroll: 4
       }
 
-      const deviceOS = getDeviceOS()
+      const deviceOS = this.props.deviceOS
 
       return (
         <div style={{ padding: 10, marginBottom: 20 }}>

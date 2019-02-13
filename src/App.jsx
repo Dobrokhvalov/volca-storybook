@@ -34,10 +34,7 @@ class App extends Component {
             <Route render={
               (props) => {
                 return (
-                  <div>
-                    <Header {...this.props} />
-                    <NoWalletScreen {...this.props} {...props} />
-                  </div>
+                  <NoWalletScreen {...this.props} {...props} />
                 )
               }
             } />

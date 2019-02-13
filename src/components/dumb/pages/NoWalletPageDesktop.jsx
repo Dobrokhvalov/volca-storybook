@@ -3,7 +3,6 @@ import Button from '../common/Button'
 import PageContainer from '../common/PageContainer'
 import styles from '../../NotConnectedScreens/styles'
 
-
 const Instructions = () => {
   return (
     <div style={styles.instructionsContainer}>
