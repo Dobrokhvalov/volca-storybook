@@ -3,7 +3,7 @@ import Header from '../common/Header'
 import Footer from '../common/Footer'
 import PageContainer from '../common/PageContainer'
 import PendingIcon from '../common/PendingIcon'
-import { getEtherscanLinkTx } from '../../utils'
+import { getEtherscanLinkTx } from '../../../utils'
 import './pages.css'
 
 const PageContent = ({ txHash, networkId = '1' }) => {

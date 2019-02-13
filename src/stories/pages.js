@@ -2,9 +2,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 // pages
-import ClaimPage from '../new-components/pages/ClaimPage'
-import ClaimPendingPage from '../new-components/pages/ClaimPendingPage'
-import ClaimCompletedPage from '../new-components/pages/ClaimCompletedPage'
+import ClaimPage from '../components/dumb/pages/ClaimPage'
+import ClaimPendingPage from '../components/dumb/pages/ClaimPendingPage'
+import ClaimCompletedPage from '../components/dumb/pages/ClaimCompletedPage'
 
 // Pages
 storiesOf('Pages', module)
