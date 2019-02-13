@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import web3Service from './services/web3Service'
-import DeployAirdropScreen from './components/DeployAirdropScreen/DeployAirdropScreen'
-import DeployNFTLinkdropScreen from './components/DeployNFTLinkdropScreen/DeployNFTLinkdropScreen'
-import ClaimScreen from './components/ClaimScreen/ClaimScreen'
+// import ClaimScreen from './components/ClaimScreen/ClaimScreen'
 import ClaimNFTScreen from './components/ClaimScreen/ClaimNFTScreen'
-import AuthScreen from './components/AuthScreen/AuthScreen'
+// import AuthScreen from './components/AuthScreen/AuthScreen'
 import TransferComponent from './components/Transfer'
-import LinkdropScreen from './components/LinkdropScreen/LinkdropScreen'
-import LinkdropNFTScreen from './components/LinkdropScreen/LinkdropNFTScreen'
 import Header from './components/common/Header/ReferalHeader'
 import { Loader } from './components/common/Spinner'
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
@@ -86,19 +82,12 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path='/transfers/:transferId' component={TransferComponent} />
-            <Route exact path='/linkdrops/:linkdropAddress' component={LinkdropScreen} />
-            <Route exact path='/linkdrops/nft/:linkdropAddress' component={LinkdropNFTScreen} />
-            <Route path='/demo' component={DeployAirdropScreen} />
-            <Route path='/deploy-nft' component={DeployNFTLinkdropScreen} />
-            <Route path='/deploy-erc20' component={DeployAirdropScreen} />
-            <Route path='/receive' component={ClaimScreen} />
-            <Route path='/receive-nft' component={ClaimNFTScreen} />
-            <Route path='/auth' component={AuthScreen} />
-            <Route path='/r' render={
+               <Route path='/receive-nft' component={ClaimNFTScreen} />
+               <Route path='/r' render={
               (props) => {
                 return (
                   <Redirect to={{
-                    pathname: '/receive',
+                    pathname: '/receive-nft',
                     search: props.location.search
                   }} />
                 )
