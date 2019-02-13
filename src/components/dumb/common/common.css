@@ -204,7 +204,8 @@ a.link:hover {
 /* Typography CSS */
 .title {
     font-size: 24px;
-    font-family: Inter UI Black;
+    font-family: Inter UI Regular;
+    letter-spacing: -1px;   
 }
 
 .subtitle {
