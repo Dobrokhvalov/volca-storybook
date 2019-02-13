@@ -89,10 +89,10 @@
 }
 @keyframes lds-button-spinner {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -137,18 +137,18 @@
 
 @-webkit-keyframes pulse {
     0% {
-	opacity: 0.5;
+	      opacity: 0.5;
     }
     100% {
-	opacity: 1;
+	      opacity: 1;
     }
 }
 @keyframes pulse {
     0% {
-	opacity: 0.5;
+	      opacity: 0.5;
     }
     100% {
-	opacity: 1;
+	      opacity: 1;
     }    
 }
 
@@ -198,7 +198,6 @@ a.link:hover {
     height: 80px;
     display: block;
     margin: auto;
-    margin-top: 80px;
 }
 
 

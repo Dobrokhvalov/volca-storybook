@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import TransferStepsBar from './../common/TransferStepsBar'
 import { getAllTransfers } from '../../data/selectors'
-import CompletedReceivedScreen from './CompletedReceivedScreen'
 import ReceivingScreen from './ReceivingScreen'
-import WithHistory from './../HistoryScreen/WithHistory'
-import HistoryScreen from './../HistoryScreen'
 import TxErrorScreen from './TxErrorScreen'
-import PoweredByVolca from './../common/poweredByVolca'
-import { Grid, Row, Col } from 'react-bootstrap'
-import Header from './../common/Header/ReferalHeader'
+import ClaimCompletedPage from '../../new-components/pages/ClaimCompletedPage'
 
 export class TransferScreen extends Component {
   render () {
-    const { transfer, currentStep, urlError } = this.props
+    const { transfer, urlError } = this.props
     // if transfer not found
     if (urlError) {
       return (<div style={{ color: 'red' }}>{urlError}</div>)
@@ -30,31 +24,17 @@ export class TransferScreen extends Component {
         )
       case 'received':
         return (
-          <CompletedReceivedScreen transfer={transfer} isReceiver />
+          <ClaimCompletedPage
+            networkId={transfer.networkId}
+            txHash={transfer.txHash}
+            isReceiver />
         )
       default: {
-        alert('Unknown status: ' + transfer.status)
+        window.alert('Unknown status: ' + transfer.status)
       }
     }
   }
 }
-
-const TransferScreenWithHistory = (props) => (
-  <div>
-    <Header />
-    <div style={{ height: window.innerHeight - 74, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-      <Grid>
-        <Row>
-          <Col sm={4} smOffset={4}>
-            <TransferScreen {...props} />
-          </Col>
-        </Row>
-      </Grid>
-      <PoweredByVolca style={{ alignSelf: 'flex-end' }} />
-    </div>
-  </div>
-
-)
 
 const mapStateToProps = (state, props) => {
   const transferId = props.match.params.transferId
@@ -70,4 +50,4 @@ const mapStateToProps = (state, props) => {
   }
 }
 
-export default connect(mapStateToProps)(TransferScreenWithHistory)
+export default connect(mapStateToProps)(TransferScreen)

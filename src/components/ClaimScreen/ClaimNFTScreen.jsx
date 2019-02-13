@@ -1,19 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Row, Col, Grid } from 'react-bootstrap'
-import Promise from 'bluebird'
 import RetinaImage from 'react-retina-image'
 import eth2air from 'eth2air-core'
 import ButtonPrimary from './../common/ButtonPrimary'
-import { SpinnerOrError, Loader } from './../common/Spinner'
-import { getNetworkNameById } from '../../utils'
-import WithHistory from './../HistoryScreen/WithHistory'
+import { SpinnerOrError, Loader, ButtonLoader } from '../common/Spinner'
 import { claimNFT } from '../../actions/transfer'
 import web3Service from './../../services/web3Service'
 import { getAllTransfers } from './../../data/selectors'
 import styles from './styles'
 import CompletedReceivedScreen from './../Transfer/CompletedReceivedScreen'
-import { ButtonLoader } from './../common/Spinner'
 import Header from './../common/Header/ReferalHeader'
 import PoweredByVolca from './../common/poweredByVolca'
 import ReactGA from 'react-ga'
@@ -33,11 +28,11 @@ class ClaimScreen extends Component {
     ReactGA.ga('send', 'pageview', '/claim-nft')
 
     this.state = {
-	    networkId: (networkId || '1'),
+      networkId: (networkId || '1'),
       contractAddress,
       referralAddress,
       transitPK,
-	    tokenId,
+      tokenId,
       keyR,
       keyS,
       keyV,
@@ -60,27 +55,17 @@ class ClaimScreen extends Component {
     try {
       const web3 = web3Service.getWeb3()
 
-	    // hack to show no web3 page, after auth redirect
-	    if (!web3) {
+      // hack to show no web3 page, after auth redirect
+      if (!web3) {
         window.location.reload()
         return null
-	    }
+      }
 
-	    //
-	    if (String(this.state.networkId) !== String(this.props.networkId)) {
-        alert("You're connected to wrong network!")
+      //
+      if (String(this.state.networkId) !== String(this.props.networkId)) {
+        window.alert("You're connected to wrong network!")
         return null
-	    }
-
-      // get airdrop params from the airdrop smart-contract
-      // const {
-      //     tokenSymbol,
-	    // 	tokenName,
-      //     tokenAddress
-      // } = await eth2air.getAirdropParams({
-      //     contractAddress: this.state.contractAddress,
-      //     web3
-      // });
+      }
 
       const linkClaimed = await eth2air.isLinkClaimed({
         contractAddress: this.state.contractAddress,
@@ -88,23 +73,21 @@ class ClaimScreen extends Component {
         web3
       })
 
-	    console.log(linkClaimed)
+      console.log(linkClaimed)
 
-	    const tokenSymbol = 'Claim NFT'
-	    const tokenAddress = '0x0x00000'
-	    // const tokenId = 2;
+      const tokenSymbol = 'Claim NFT'
+      const tokenAddress = '0x0x00000'
 
       // update UI
       this.setState({
         tokenSymbol,
-        // tokenId,
         tokenAddress,
         linkClaimed,
         loading: false
       })
     } catch (err) {
       console.log(err)
-      alert("Couldn't get airdrop details. Error details in the console.")
+      window.alert("Couldn't get airdrop details. Error details in the console.")
     }
   }
 
@@ -124,12 +107,6 @@ class ClaimScreen extends Component {
         keyV: this.state.keyV
       })
       this.setState({ fetching: false })
-
-	    // #ga
-	    // ReactGA.event({
-	    // 	category: 'Link',
-	    // 	action: 'Claimed'
-	    // });
 
       this.props.history.push(`/transfers/${transfer.id}`)
     } catch (err) {
@@ -162,13 +139,13 @@ class ClaimScreen extends Component {
     }
 
     if (this.state.linkClaimed) {
-	    let transfer
-	    const cacheTransfer = this.props.cacheTransfers.filter(transfer => transfer.transitPK === this.state.transitPK)[0]
-	    let isFromCache = false
-	    if (cacheTransfer) {
+      let transfer
+      const cacheTransfer = this.props.cacheTransfers.filter(transfer => transfer.transitPK === this.state.transitPK)[0]
+      let isFromCache = false
+      if (cacheTransfer) {
         transfer = cacheTransfer
         isFromCache = true
-	    } else {
+      } else {
         // construct object from url params
         const txHash = null
         const networkId = this.props.networkId
@@ -186,7 +163,7 @@ class ClaimScreen extends Component {
           referralAmount,
           receiverAddress
         }
-	    }
+      }
       return (
         <CompletedReceivedScreen transfer={transfer} isReceiver={isFromCache} />
       )
@@ -229,7 +206,6 @@ class ClaimScreen extends Component {
           <PoweredByVolca style={{ alignSelf: 'flex-end' }} />
         </div>
       </div>
-
     )
   }
 }
