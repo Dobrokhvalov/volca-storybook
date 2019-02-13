@@ -3,10 +3,11 @@ import Header from '../common/Header'
 import Footer from '../common/Footer'
 import PageContainer from '../common/PageContainer'
 import PendingIcon from '../common/PendingIcon'
+import { getEtherscanLinkTx } from '../../utils'
 import './pages.css'
 
-const PageContent = () => {
-  const etherscanLink = '#'
+const PageContent = ({ txHash, networkId = '1' }) => {
+  const etherscanLink = getEtherscanLinkTx({ txHash, networkId })
   return (
     <div className='claim-pending-page'>
       <PendingIcon />
@@ -36,7 +37,7 @@ class ClaimPendingPage extends React.Component {
     return (
       <PageContainer>
         <Header />
-        <PageContent />
+        <PageContent {...this.props} />
         <Footer />
       </PageContainer>
     )

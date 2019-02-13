@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllTransfers } from '../../data/selectors'
-import ReceivingScreen from './ReceivingScreen'
 import TxErrorScreen from './TxErrorScreen'
 import ClaimCompletedPage from '../../new-components/pages/ClaimCompletedPage'
+import ClaimPendingPage from '../../new-components/pages/ClaimPendingPage'
 
 export class TransferScreen extends Component {
   render () {
@@ -19,16 +19,19 @@ export class TransferScreen extends Component {
 
     switch (transfer.status) {
       case 'receiving':
-        return (
-          <ReceivingScreen transfer={transfer} />
-        )
       case 'received':
         return (
-          <ClaimCompletedPage
+          <ClaimPendingPage
             networkId={transfer.networkId}
-            txHash={transfer.txHash}
-            isReceiver />
+            txHash={transfer.txHash} />
         )
+        /* case 'received':
+         *   return (
+         *     <ClaimCompletedPage
+         *       networkId={transfer.networkId}
+         *       txHash={transfer.txHash}
+         *       isReceiver />
+        ) */
       default: {
         window.alert('Unknown status: ' + transfer.status)
       }
