@@ -4,9 +4,10 @@ import Footer from '../common/Footer'
 import Button from '../common/Button'
 import PageContainer from '../common/PageContainer'
 import TokenIcon from '../common/TokenIcon'
+import Error from '../common/Error'
 import './pages.css'
 
-const PageContent = ({ onSubmit, refreshing }) => {
+const PageContent = ({ onSubmit, refreshing, error = null }) => {
   return (
     <div className='claim-page'>
       <TokenIcon />
@@ -15,6 +16,7 @@ const PageContent = ({ onSubmit, refreshing }) => {
         label='Claim'
         onClick={onSubmit}
         refreshing={refreshing} />
+      <Error text={error} />
       <div className='button-subtitle text-center'>Claiming to:
         <span className='bold'> 0x000...000</span>
       </div>

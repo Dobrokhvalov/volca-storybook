@@ -15,6 +15,12 @@
     margin: auto;
 }
 
+.claim-page .error-msg {
+    text-align: center;
+    height: 28px;
+    padding-top: 8px;
+}
+
 .claim-page .button-subtitle {    
     margin-top: 20px;
     font-size: 18px;
