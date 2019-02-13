@@ -15,7 +15,7 @@ const PageContent = ({ onSubmit, refreshing }) => {
         label='Claim'
         onClick={onSubmit}
         refreshing={refreshing} />
-      <div className='button-subtitle'>Claiming to:
+      <div className='button-subtitle text-center'>Claiming to:
         <span className='bold'> 0x000...000</span>
       </div>
     </div>

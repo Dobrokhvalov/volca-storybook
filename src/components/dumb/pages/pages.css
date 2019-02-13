@@ -1,9 +1,4 @@
 /* Claim Page */
-.claim-page *{
-    margin: auto;
-    text-align: center;
-}
-
 .claim-page .claim-title {
     font-family: Inter UI Black;
     font-style: normal;
@@ -11,10 +6,13 @@
     line-height: normal;
     font-size: 35px;
     text-align: center;
-    color: #0078FF;
-    
+    color: #0078FF;    
     margin-top: 30px;
     margin-bottom: 50px;
+}
+
+.claim-page .token-icon {
+    margin: auto;
 }
 
 .claim-page .button-subtitle {    
