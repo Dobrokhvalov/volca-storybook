@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllTransfers } from '../../data/selectors'
 import TxErrorScreen from './TxErrorScreen'
-import ClaimCompletedPage from '../../new-components/pages/ClaimCompletedPage'
-import ClaimPendingPage from '../../new-components/pages/ClaimPendingPage'
+import ClaimCompletedPage from '../dumb/pages/ClaimCompletedPage'
+import ClaimPendingPage from '../dumb/pages/ClaimPendingPage'
 
 export class TransferScreen extends Component {
   render () {

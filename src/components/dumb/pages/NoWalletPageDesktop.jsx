@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../common/Button'
 import PageContainer from '../common/PageContainer'
+import AttentionIcon from '../common/AttentionIcon'
 import styles from '../../NotConnectedScreens/styles'
 
 const Instructions = () => {
@@ -28,21 +29,28 @@ class NoWalletDesktop extends React.Component {
     }, 0)
   }
 
+  _openMetamask () {
+    window.open('https://metamask.io', '_blank')
+  }
+  
   render () {
     return (
       <PageContainer>
         <div>
-          <div><img src={'https://raw.githubusercontent.com/Eth2io/eth2-assets/master/images/attention_icon.png'} style={styles.largeWalletIcon} /></div>
+          <div style={{ marginTop: 50 }} >
+            <AttentionIcon />
+          </div>
           <div style={{ ...styles.title }}>You need a wallet to<br />claim tokens </div>
           <div style={styles.buttonRow}>
             <Button
               label='Use Portis'
-              style={{ backgroundColor: '#6CB3DB', borderColor: '#6CB3DB' }}
               refreshing={this.state.fetchingPortis}
               onClick={this._openPortisModal.bind(this)} />
           </div>
           <div style={styles.buttonRow}>
-            <a href='https://metamask.io/' style={{ ...styles.button, backgroundColor: '#f5a623', borderColor: '#f5a623' }} target='_blank'>Use Metamask</a>
+            <Button
+              label='Use Metamask'
+              onClick={this._openMetamask.bind(this)} /> 
           </div>
           <Instructions />
         </div>

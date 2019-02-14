@@ -5,8 +5,8 @@ import { Loader } from '../common/Spinner'
 import { claimNFT } from '../../actions/transfer'
 import web3Service from './../../services/web3Service'
 import { getAllTransfers } from './../../data/selectors'
-import ClaimCompletedPage from '../../new-components/pages/ClaimCompletedPage'
-import ClaimPage from '../../new-components/pages/ClaimPage'
+import ClaimCompletedPage from '../dumb//pages/ClaimCompletedPage'
+import ClaimPage from '../dumb/pages/ClaimPage'
 const qs = require('querystring')
 
 class ClaimScreen extends Component {

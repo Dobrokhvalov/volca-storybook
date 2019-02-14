@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   _renderNoWalletScreen () {
-    console.log('this.props', this.props)
     return (
       <Router>
         <div>

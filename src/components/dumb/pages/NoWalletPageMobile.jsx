@@ -1,12 +1,12 @@
 import React from 'react'
-
-import ButtonPrimary from './../../common/ButtonPrimary'
 import WalletSlider from '../../NotConnectedScreens/WalletSlider'
 import { ButtonLoader } from './../../common/Spinner'
 import styles from '../../NotConnectedScreens/styles'
 import wallets from '../../NotConnectedScreens/wallets'
 
+import Button from '../common/Button'
 import PageContainer from '../common/PageContainer'
+import AttentionIcon from '../common/AttentionIcon'
 import copy from 'copy-to-clipboard'
 
 class NoWalletPageMobile extends React.Component {
@@ -37,11 +37,13 @@ class NoWalletPageMobile extends React.Component {
   }
   
   _renderWithDeepLink (deepLink) {
-    const walletIcon = `https://raw.githubusercontent.com/Eth2io/eth2-assets/master/images/${this.state.selectedWallet.id}.png`
 
     return (
       <div style={{ paddingBottom: 20 }}>
-        <div><img src={walletIcon} style={styles.largeWalletIcon} /></div>
+        <div style={{ marginTop: 50 }} >
+          <AttentionIcon />
+        </div>
+
         <div style={{ ...styles.title }}>
           You need a wallet to <br /> claim
           { this.state.amount && this.state.token
@@ -88,13 +90,15 @@ class NoWalletPageMobile extends React.Component {
         <div style={{ ...styles.title, marginTop: 30, marginBottom: 40 }}>How to claim tokens <br />to {this.state.selectedWallet.name}</div>
         <Instructions wallet={this.state.selectedWallet} isDeepLink={false} />
         <div style={styles.buttonContainer}>
-          <ButtonPrimary
-            handleClick={() => {
+          <Button
+            style={{ opacity: 0.7 }}
+            onClick={() => {
               // copy current location link to clipboard
               copy(window.location.href)
               window.alert('The link is copied to your clipboard.')
             }}
-            textColor='#0078FF' buttonColor='rgba(0, 153, 255, 0.2)' className='light-blue-button'>Copy Link</ButtonPrimary>
+            label='Copy Link'
+            />
         </div>
         { this._renderSlider() }
       </div>
