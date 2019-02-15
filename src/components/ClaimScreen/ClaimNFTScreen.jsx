@@ -64,6 +64,13 @@ class ClaimScreen extends Component {
 
       console.log(linkClaimed)
 
+      const linkdropParams = eth2air.getLinkdropParamsNFT({
+        contractAddress: this.state.contractAddress,
+        web3
+      })
+
+      console.log({linkdropParams})
+      
       const tokenSymbol = 'Claim NFT'
       const tokenAddress = '0x0x00000'
 
